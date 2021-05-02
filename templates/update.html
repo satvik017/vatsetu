@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='css/style.css') }}">
+        <!-- <script src="{{ url_for('static', filename='js/test.js') }}"></script> -->
+    <title> update</title>
+
+    <!-- styling -->
+    <style type="text/css">
+        body{
+            background-color: #c6d7ec;
+        }
+        .container3{
+            background-color: white;
+            margin: 30px;
+            padding: 10px;
+        }
+        .spn1{
+            color: #1a75ff;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="24" height="24">
+      <span class="spn1">Vat</span>setu
+    </a>
+  </div>
+</nav>
+   <!--  <a class="navbar-brand" href="#">Vatsetu</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page1.html">Quick Search</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Your result</a>
+        </li>
+            
+        <li class="nav-item">
+          <a class="nav-link" href="page2.html#">Donors Area</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Update</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    <div class="container3">
+        <h1 class="center"><span class="spn1">Vat</span>setu</h1>
+    <div class="container my-3">
+        <h2>Update your information</h2>
+        <br>
+        <form action="/update/{{todo.sno}}" method="POST">
+            <div class="mb-3">
+              <label for="title" class="form-label"></label>
+             <!--  <input type="text" class="form-control" name="pre" id="pre" value="{{todo.item}}" aria-describedby="emailHelp" disabled>  -->
+              <label for="title" class="form-label">Edit item name</label><br>
+              <select name="title" id="title">
+                <option value="Beds">Beds</option>
+                <option value="ICU">ICU</option>
+                <option value="Oxygen">Oxygen</option>
+                <option value="ventilator">Ventilator</option>
+                <option value="fabiflu">fabiflu</option>
+                <option value="Remdesivir">Remdesivir</option>
+                <option value="Tocilizumab">Tocilizumab</option>
+                <option value="Plasma">Plasma</option>
+                <option value="Tiffin">Tiffin</option>
+                <option value="other">other</option>
+            </select>
+            </div>
+            <div class="mb-3">
+              <label for="desc" class="form-label">Todo Description</label>
+              <input type="text" class="form-control" name="desc" id="desc">
+              <!-- <input type="text" class="form-control" value="{{todo.description}}" name="desc" id="desc"> -->
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Edit mobile</label>
+              <input type="text" class="form-control" name="phone" id="phone">
+              <!-- <input type="text" class="form-control" value="{{todo.phone}}" name="phone" id="phone"> -->
+            </div>
+            <div class="mb-3">
+              <label for="city" class="form-label">Select city</label><br>
+              <select name="city" id="city">
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="pune">Pune</option>
+                <option value="Banglore">Banglore</option>
+                <option value="thane">Thane</option>
+                <option value="hyderabad">hyderabad</option>
+                <option value="naagpur">Naagpur</option>
+                <option value="lucknow">Lucknow</option>
+                <option value="ahmdabad">Ahmdabad</option>
+                <option value="chennai">Chennai</option>
+                <option value="kolkata">Kolkata</option>
+                <option value="goa">Goa</option>
+            </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+    </div>
+   </div>
+</body>
+
+</html>

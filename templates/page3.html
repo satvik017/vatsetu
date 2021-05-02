@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>your result</title>
+</head>
+<style>
+  body{
+    /* background: url('https://www.mtpr.org/sites/kufm/files/styles/medium/public/202007/COVID-mask_iStock.jpg'); */
+    background: url('https://sbyireview.files.wordpress.com/2016/07/vaccine.jpeg?w=1280&h=768&crop=1');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ .box{
+  Background-color: rgba(255,255,255,0.3);
+ }
+</style>
+<body>
+  <div class="container text-white">
+    <h3>
+      <a href="/">Back TO home</a>
+    </h3>
+  </div>
+    <div class="box container text-center">
+        <h3>your results are:</h3>
+        {% if allTodo|length == 0 %}
+                   
+        <div class="alert alert-dark" role="alert">
+            No Todos found. Add your first todo now!
+          </div>
+        {% else %}
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">item</th>
+                <th scope="col">Description</th>
+                <th scope="col">Location</th>
+                <th scope="col">contact</th>
+                <th scope="col">Time</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <!-- its not working  (it  work when you install flask and jinja2)-->
+                {% if (item!=0 and place!=0) or search!=0 %}
+                    {% for todo in allTodo %}
+                        {% if (todo.place==place and todo.item==item) or (todo.item in search or todo.place in search) %}
+                        <tr>
+                            <td>{{todo.item}}</td>
+                            <td>{{todo.description}}</td>
+                            <td>{{todo.place}}</td>
+                            <td>{{todo.phone}}</td>
+                            <td>{{todo.date_created}}</td>
+                            <td>
+                              <a href="/update/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Update</button>
+                              <a href="/delete/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Delete</button>
+                            
+                            </td>
+                          </tr>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                {% for todo in allTodo %}
+                <tr>
+                  <th scope="row">{{loop.index}}</th>
+                  <td>{{todo.item}}</td>
+                  <td>{{todo.description}}</td>
+                  <td>{{todo.place}}</td>
+                  <td>{{todo.phone}}</td>
+                  <td>{{todo.date_created}}</td>
+                  <td>
+                    <a href="/update/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Update</button>
+                    <a href="/delete/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Delete</button>
+                  
+                  </td>
+                </tr>
+                
+                {% endfor %}
+                {% endif %}
+</tbody>
+</table>
+  {% endif %}
+   
+    </div>
+</body>
+</html>
