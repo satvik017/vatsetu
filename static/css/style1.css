@@ -1,0 +1,196 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: black;
+}
+
+#body{
+    
+    /* background-image: url(''); */
+    background-image: url('https://epmgaa.media.clients.ellingtoncms.com/img/croppedphotos/2020/02/19/statementopinionp4from_Illinois_Primary_Health_Care_Association_on_Gov.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 10px;
+}
+#d1{
+    display: block; 
+}
+#d1 h2{
+    margin: 0px 80px;
+    color: grey;
+}
+#d1 h1{
+    font-size: 9rem;
+}
+#b1{
+    color: white;
+}
+#b2:hover{
+    color: white;
+}
+#div_for_btn a{
+    font-size: 30px;
+    text-decoration: none;
+}
+#search{
+    font-size: 25px;
+}
+.box{
+    display: flex;
+}
+.spn1{
+    color: #1a75ff;
+}
+.box2{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+}
+#sec3{
+    display: none;
+}
+label{
+    margin-left: 12px;
+}
+.item h3{
+    font-size: 40px;
+}
+hr{
+    color: black;
+    background-color: black;
+    margin: 0px 3px;
+    width: 2px;
+    height: 15px;
+}
+.img-1{
+    max-width: 260px;
+    background-color: aliceblue;
+}
+h3{
+    font-size: 30px;
+}
+.mb-0{
+    margin-bottom: 0px;
+    line-height: 300px;
+}
+.text-blue{
+    /*color: rgb(30, 30, 247);*/
+    font-size: 3rem;
+}
+
+
+/* form css */
+
+#heading {
+    text-transform: uppercase;
+    color: #ff9933;
+    font-weight: normal
+}
+
+
+/****************************************************************************************************/
+/***************************************    page 1 styling          *********************************/
+/****************************************************************************************************/
+
+.img {
+    width: 70px;
+}
+
+.item{
+    font-size: 34px;
+    text-align: center; 
+}
+.container{
+    /*height: 300px;*/
+    width: 100%;
+    /*background-color: grey;*/
+    display: flex;
+}
+#body2{
+    background-image: url('file:///C:/Users/welcome/Desktop/vatsetuWeb/content/img/doctor-patient-healthcare-medicine.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #c6d7ec
+}
+#sec4{
+    display: none;
+}
+
+/*************************************************************************************/
+/************************   PAGE3 donors area ****************************************/
+/*************************************************************************************/
+#body2{
+    background-color: #c6d7ec;
+}
+.container2{
+    background-color: white;
+    text-align: left;
+    margin: 34px;
+}
+#heading_2{
+    margin: 40px 0px;
+    text-align: center;
+}
+.spn1{
+    color: #1a75ff;
+}
+.item{
+    font-size: 34px;
+    text-align: center; 
+}
+.item h3{
+    font-size: 40px;
+}
+
+/****************************************************** media queries******************************/
+@media  (min-width: 100px) and (max-width: 800px){
+    #body{
+      background: unset;
+      background-color: #c6d7ec;
+      /*background-image: url('https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201504/big-data-medicine-model_0.jpg?itok=SS8arw8X');*/
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #sec2{
+
+       background-color: white;
+       text-align: center;
+    }
+    /*main heading*/
+    #d1{
+       margin-top: 5px;
+       /*height: 200px;*/
+        display: block; 
+       text-align: center;
+    }
+    #d1 h2{
+        margin: 0px 30px;
+        color: grey;
+    }
+    #d1 h1{
+        font-size: 3rem;
+    }
+    /*button*/
+    #div_for_btn a{
+        font-size: 12px;
+        text-decoration: none;
+        margin: 15px 0px;
+    }
+    #sec3{
+        display: block;
+        background-color: white;
+        margin: 20px 0px;
+        justify-content: center;
+        padding: 5px;
+    }
+    #sec4{
+        display: block;
+    background-color: black;
+    text-align: center;
+    }
+    #sec4 footer{
+    color: white;
+    }
+
+}

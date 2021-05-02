@@ -1,0 +1,201 @@
+#body2{
+	background-color: #c6d7ec;
+}
+.box{
+    /*display: flex;*/
+    margin: 34px;
+
+}
+.left{
+    text-align: left;
+}
+
+#heading_2{
+	margin: 40px 0px;
+	text-align: center;
+}
+.container2{
+	background-color: white;
+	text-align: left;
+    margin: 50px;
+    padding: 10px;
+}
+.spn1{
+    color: #1a75ff;
+}
+.item{
+    /*font-size: 34px;*/
+    text-align: center; 
+    display: inline-block;
+    font-size: 30px;
+}
+.item h3{
+    font-size: 40px;
+}
+#prev{
+    /*border: 2px solid red;*/
+    float: left;
+    text-align: left;
+}
+#prev:hover{
+    color: red;
+}
+.chk{
+    margin: 0px 23px;
+}
+
+/*action button*/
+#sub, .next{
+    background-color: #66a3ff;
+    border: none;
+    font-size: 30px;
+    color: white;
+    margin: 0px 50px;
+}
+#sub:hover, .next:hover{
+    background-color: #4d94ff;
+    text-decoration: underline;
+}
+.donoar{
+    height: 100px;
+}
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    /*position: relative*/
+}
+
+.form-card {
+    text-align: left
+}
+
+#msform input,
+#msform textarea {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    /*width: 100%;*/
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 20px;
+    letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ff9933;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: #4d94ff;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: #4d94ff;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    background-color: #000000
+}
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "4"
+}
+
+#donomobile, #donodesc{
+    display: inline-block;  
+}
+
+/*************************media queries************************************************************/
+@media  (min-width: 100px) and (max-width: 800px){
+.left{
+    text-align: left;
+    /*color: red;*/
+    font-size: 20px;
+}
+
+#heading_2{
+    margin: 20px 0px;
+    text-align: left;
+    display: none;
+}
+.container2{
+    background-color: white;
+    text-align: left;
+    /*border: 3px solid red;*/
+    margin: 6px;
+    /*width: 100%;*/
+}
+.spn1{
+    color: #1a75ff;
+}
+.item{
+    /*font-size: 34px;*/
+    text-align: center; 
+    display: inline-block;
+}
+.item h3{
+    font-size: 25px;
+}
+#prev{
+    /*border: 2px solid red;*/
+    float: left;
+    text-align: left;
+    font-size: 20px;
+}
+.chk{
+    margin:0px;
+    padding: 0px;
+    word-wrap: normal;
+}
+
+/*action button*/
+#sub, .next{
+    background-color: #66a3ff;
+    border: none;
+    font-size: 20px;
+    color: white;
+    /*margin: 0px 30px;*/
+}
+
+.donoar{
+    height: 50px;
+}
+}
